@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+			<title>DevCamp</title>
+			<meta charset="utf-8"> 
+			<meta name="description" content="DevCamp">
+			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+			<meta name="viewport" content =" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		</head>	
+	
+
+	<body>
+		<!-- navigasi awal -->
+		<nav class="teal lighten-1 container" role ="navigation">
+			<div class="nav-wrapper ">
+				<a href="#" class="brand-logo ">DevCamp</a>
+				<a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+				<ul class="topnav right hide-on-med-and-down"></ul>
+                <ul class="sidenav" id="nav-mobile"></ul>
+			</div>
+		</nav>
+
+		<div  id="body-cont" class="container"></div>
+
+		<!--Import jQuery before materialize.js-->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+<!-- 		<script type="text/javascript" src="js/init.js"></script> -->
+		<script type="text/javascript" src="js/nav.js"></script>
+	</body>
+<script type="text/javascript">
+	if("serviceWorker" in navigator){
+		window.addEventListener("load",function() {
+			navigator.serviceWorker
+			.register("js/SW.js")
+			.then(function(){
+				console.log("pendaftaran serviceWorker berhasil");
+
+			})
+			.catch(function(){
+				console.log("pendaftaran serviceWorker gagal")
+
+			});
+
+		})
+
+	}else{
+		console.log("serviceWorker belum didukung browser ini");
+
+	}
+
+
+
+</script>
+
+
+
+	<footer>
+		<div class="teal lighten-6 container">
+			<p>created by Hendra</p>
+		</div>
+	</footer>
+</html>
